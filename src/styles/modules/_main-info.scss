@@ -1,6 +1,7 @@
 .main-info {
   position: relative;
   z-index: 2;
+  overflow: hidden;
   box-shadow: $custom-box-shadow;
 }
 
