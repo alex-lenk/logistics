@@ -107,7 +107,8 @@ $container-max-widths: (
 
 .form-control {
   color: $black;
-  box-shadow: 0 0 5px rgba(#000, .25);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
 
   &:focus {
     outline: none;

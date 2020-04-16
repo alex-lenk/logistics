@@ -1,3 +1,9 @@
+//= vendor/jquery-3.5.0.slim.min.js
+//= vendor/jquery.maskedinput.min.js
+
+$(document).ready(function () {
+    $('#call-form__tel').mask("+7 (999) 999-99-99");
+});
 /*
 * 0.
 * 1.

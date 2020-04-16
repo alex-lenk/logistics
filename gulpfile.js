@@ -49,7 +49,7 @@ const paths = {
 
 gulp.task('svgIcons', function () {
     return gulp
-        .src('./src/img/ico/*.svg')
+        .src('./src/img/icons/*.svg')
         .pipe(svgmin(function (file) {
             var prefix = basePath.basename(file.relative, basePath.extname(file.relative));
             return {

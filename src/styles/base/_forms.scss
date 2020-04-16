@@ -1,6 +1,7 @@
 .hide-placeholder {
   @include hidePlaceholder {
-    color: $gray-800;
+    font-size: 14px;
+    color: $gray-900;
     opacity: 1;
     transition: opacity 0.4s ease;
   }
@@ -14,12 +15,23 @@
 }
 
 .form-group-prepend {
+  width: 25%;
+  margin-right: 3%;
+  padding-right: 15px;
   position: relative;
+
+  &::after {
+    color: $red;
+    font-size: 14px;
+    position: absolute;
+    top: 14px;
+    right: 0;
+    content: '*';
+  }
 }
 
 .form-group-prepend__field {
-  padding-left: 30px;
-  background-color: $gray-400;
+  padding-left: 34px;
 }
 
 .form-group-prepend__icon {
@@ -27,9 +39,9 @@
   height: 15px;
   margin-top: -8px;
   top: 50%;
-  left: 11px;
+  left: 13px;
   position: absolute;
-  fill: $gray-800;
+  fill: $gray-900;
 }
 
 .form-errors-text {
