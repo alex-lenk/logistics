@@ -1,0 +1,56 @@
+.logistics-distribution {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: $gray-400;
+  box-shadow: $custom-box-shadow;
+}
+
+.logistics-distribution__inner {
+  display: flex;
+}
+
+.logistics-distribution__item {
+  max-width: 50%;
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex-shrink: 0;
+    content: '';
+  }
+}
+
+.icon-logistics::before {
+  width: 200px;
+  height: 206px;
+  margin-right: 10px;
+  background-image: url(../img/log-dist/logistics.svg);
+}
+
+.icon-distribution::before {
+  width: 170px;
+  height: 215px;
+  margin-right: 31px;
+  margin-left: 12px;
+  background-image: url(../img/log-dist/distribution.svg);
+}
+
+.logistics-distribution__title {
+  margin-bottom: 18px;
+  line-height: 1;
+  color: $red;
+}
+
+.logistics-distribution__list {
+  margin-bottom: 18px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.logistics-distribution__list-item:not(:last-child) {
+  margin-bottom: 12px;
+}
