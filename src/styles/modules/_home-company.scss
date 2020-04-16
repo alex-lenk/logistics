@@ -1,0 +1,26 @@
+.home-company {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: $gray-400;
+  box-shadow: $custom-box-shadow;
+}
+
+.home-company__inner {
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+}
+
+.home-company__content {
+  line-height: 1.4;
+}
+.home-company__title {
+  margin-bottom: 5px;
+  font-size: 38px;
+}
+
+.home-company__pre-title {
+  margin-bottom: 7px;
+  font-size: 24px;
+  font-weight: 500;
+}
