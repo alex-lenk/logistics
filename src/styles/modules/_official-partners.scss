@@ -1,0 +1,33 @@
+.official-partners {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.official-partners__pre-title {
+  margin-bottom: 36px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.official-partners__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.official-partners__list-item {
+  width: 37%;
+
+  &:first-of-type,
+  &:last-of-type {
+    width: 31%;
+  }
+}
+
+.official-partners__title {
+  margin-bottom: 13px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+  color: $black;
+}
