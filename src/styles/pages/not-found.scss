@@ -1,0 +1,82 @@
+@import "../base/settings";
+@import "../base/mixins";
+@import "../modules/tag-styles";
+@import "../modules/popular-tags";
+
+.not-found {
+  overflow-x: hidden;
+}
+
+.not-found-title {
+  padding-bottom: 0;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.not-found-text__go {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.not-found-tag {
+  padding-bottom: 15px;
+}
+
+.not-found-tag__title {
+  margin-bottom: 25px;
+}
+
+.not-found-action__title {
+  margin-bottom: 33px;
+}
+
+@media (min-width: 768px) {
+  .not-found-head {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .not-found-text {
+    font-size: 20px;
+  }
+  .not-found-tag {
+    margin-bottom: 100px;
+    background-color: #fbfbfb;
+    padding-top: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .not-found-head {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+@media (max-width: 575px) {
+  .not-found-title {
+    font-size: 18px;
+  }
+
+  .not-found-tag__title,
+  .not-found-action__title {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .not-found-text {
+    font-size: 13px;
+  }
+  .not-found-action__item {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  .not-found-text br {
+    display: none;
+  }
+}

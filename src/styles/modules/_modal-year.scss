@@ -1,0 +1,105 @@
+.modal-year {
+  border-radius: 15px;
+  text-align: center;
+  background: #fff;
+  display: inline-block;
+  margin: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 44px;
+  position: relative;
+  vertical-align: middle;
+  z-index: 1;
+}
+
+.modal-year__wrap {
+  -webkit-backface-visibility: hidden;
+  height: 100%;
+  left: 0;
+  outline: 0;
+  text-align: center;
+  position: fixed;
+  -webkit-tap-highlight-color: transparent;
+  top: 0;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  width: 100%;
+  z-index: 99992;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .3s ease-out, opacity .3s ease-out;
+  transition-duration: 366ms;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    font-size: 0;
+    height: 100%;
+    vertical-align: middle;
+    width: 0;
+  }
+
+  &::after {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #1e1e1e;
+    opacity: 0;
+    -webkit-transition-duration: inherit;
+    transition-duration: inherit;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-timing-function: cubic-bezier(.47, 0, .74, .71);
+    transition-timing-function: cubic-bezier(.47, 0, .74, .71);
+    content: '';
+  }
+}
+
+.modal-year__open {
+  height: auto;
+  margin-right: 17px;
+  overflow: hidden;
+
+  .modal-year__wrap {
+    visibility: visible;
+    opacity: 1;
+
+    &::after {
+      opacity: .9;
+      transition-timing-function: cubic-bezier(.22, .61, .36, 1);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-year {
+    max-width: 970px;
+    box-shadow: $custom-box-shadow;
+
+    .btn-primary {
+      min-width: 200px;
+      margin-top: 20px;
+    }
+  }
+  .modal-year-text {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-year {
+    padding: 25px 14px;
+    max-width: 290px;
+
+    .btn-primary {
+      min-width: 120px;
+      margin-top: 15px;
+    }
+  }
+  .modal-year-text {
+    font-size: 13px;
+  }
+}

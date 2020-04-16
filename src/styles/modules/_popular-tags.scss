@@ -1,0 +1,34 @@
+.popular-tags {
+  position: relative;
+}
+
+@media (min-width: 576px) {
+  .popular-tags {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &::before {
+      width: 225rem;
+      height: 100%;
+      top: 0;
+      left: -75rem;
+      position: absolute;
+      z-index: -1;
+      box-shadow: 0 0 7px rgba(45, 45, 45, .25);
+      background: #fbfbfb;
+      content: '';
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .popular-tags {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .popular-tags {
+    margin-bottom: 20px;
+  }
+}

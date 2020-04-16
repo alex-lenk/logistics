@@ -1,0 +1,39 @@
+.inst-carousel {
+  margin-left: -14px;
+  margin-right: -14px;
+
+  @media (max-width: 1329px) {
+    .slick-arrow {
+      margin-top: -20px;
+    }
+
+    .slick-prev {
+      left: 5px;
+    }
+
+    .slick-next {
+      right: 5px;
+    }
+  }
+}
+
+.inst-carousel-item {
+  padding: 5px 14px;
+
+  &:focus {
+    outline: none;
+  }
+
+  @media (max-width: 575px) {
+    text-align: center;
+
+    &:not(:last-of-type) {
+      margin-bottom: 14px;
+    }
+  }
+}
+
+.inst-carousel-media {
+  border-radius: 10px;
+  box-shadow: $custom-box-shadow;
+}

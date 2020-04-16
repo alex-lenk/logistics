@@ -1,0 +1,132 @@
+.snippet-product {
+  display: block;
+
+  &:hover {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+.snippet-product-title {
+  font-weight: 500;
+  color: $black;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+}
+
+.snippet-product-title__text {
+  padding-right: 28px;
+}
+
+.snippet-product-title__icon {
+  margin-left: auto;
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  transform: rotate(180deg);
+}
+
+.snippet-product-media {
+  display: block;
+}
+
+.snippet-product-media__img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.snippet-product__content {
+  margin-top: auto;
+  padding-bottom: 20px;
+  display: none;
+}
+
+.snippet-product__box {
+  margin-bottom: 22px;
+  line-height: 1.6;
+}
+
+.snippet-product__head {
+  font-weight: 500;
+  font-size: 18px;
+  color: $black;
+}
+
+.snippet-product__cost {
+  color: $red;
+  font-weight: 500;
+}
+
+.snippet-product__btn {
+  width: 200px;
+}
+
+@media (min-width: 576px) {
+  .snippet-product {
+    padding: 20px 35px;
+    border-radius: 12px;
+    transition: box-shadow .3s;
+  }
+
+  .snippet-product-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .snippet-product-title__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .snippet-product-media {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 1100px) {
+  .snippet-product:hover {
+    box-shadow: $custom-box-shadow;
+
+    .snippet-product-media__img {
+      transform: scale(1.1);
+    }
+  }
+
+  .snippet-product-media {
+    width: 100%;
+    max-height: 342px;
+  }
+  .snippet-product-media__img {
+    transition: transform 1s ease-out;
+  }
+}
+
+@media (max-width: 1099px) {
+  .snippet-product {
+    box-shadow: $custom-box-shadow;
+  }
+}
+
+@media (max-width: 575px) {
+  .snippet-product {
+    padding: 10px 14px 14px;
+    border-radius: 15px;
+  }
+
+  .snippet-product-title {
+    margin-bottom: 7px;
+    font-size: 18px;
+  }
+  .snippet-product-media__img {
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 374px) {
+  .snippet-product-title {
+    font-size: 13px;
+  }
+}

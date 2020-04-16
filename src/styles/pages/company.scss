@@ -1,0 +1,52 @@
+@mixin stitches-sprite($x: 0, $y: 0) {
+  background-position: $x $y;
+}
+
+[class*="sprite-"]::before {
+  width: 60px;
+  height: 60px;
+  background-image: url(../img/sprites-advantages.png);
+  background-repeat: no-repeat;
+  background-size: 180px 120px;
+  display: block;
+  content: '';
+}
+
+.sprite-icon-01::before {
+  @include stitches-sprite(0, 0);
+}
+
+.sprite-icon-02::before {
+  @include stitches-sprite(-60px, 0);
+}
+
+.sprite-icon-03::before {
+  @include stitches-sprite(0, -60px);
+}
+
+.sprite-icon-04::before {
+  @include stitches-sprite(-60px, -60px);
+}
+
+.sprite-icon-05::before {
+  @include stitches-sprite(-120px, 0);
+}
+
+.sprite-icon-06::before {
+  @include stitches-sprite(-120px, -60px);
+}
+
+.advantages-list {
+  padding-top: 15px;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.advantage-list__item {
+  line-height: 1.3;
+  &::before {
+    margin: 0 auto 11px;
+  }
+}

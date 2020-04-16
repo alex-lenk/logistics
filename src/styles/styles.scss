@@ -1,0 +1,86 @@
+@import "base/mixins";
+@import "base/settings";
+@import "base/fonts";
+@import "vendor/bootstrap";
+@import "base/general";
+@import "base/forms";
+@import "base/button";
+@import "base/custom-control";
+/* General */
+
+.header {
+  padding-top: 26px;
+  padding-bottom: 26px;
+  background: $gray-400;
+  box-shadow: $custom-box-shadow;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  width: 170px;
+  height: 49px;
+}
+
+.menu {
+  width: 49%;
+  padding-left: 0;
+  margin: 0 auto 0;
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-item {
+  position: relative;
+
+  &::after,
+  &::before {
+    width: 0;
+    height: 1px;
+    opacity: 0;
+    background-color: $red;
+    position: absolute;
+    transition: opacity .4s ease, width .4s ease;
+    content: '';
+  }
+
+  &::before {
+    right: 0;
+    top: -3px;
+  }
+
+  &::after {
+    left: 0;
+    bottom: -3px;
+  }
+
+  &:hover {
+    &::after,
+    &::before {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+}
+
+.menu-link {
+  color: $black;
+
+  &:hover {
+    text-decoration: none;
+    transition: color .4s ease;
+  }
+}
+
+.header-phone {
+  color: $black;
+  font-size: 18px;
+  font-weight: 600;
+}

@@ -1,0 +1,32 @@
+.breadcrumb {
+  margin-bottom: 0;
+  padding: 12px 0;
+  list-style: none;
+  line-height: 1.2;
+}
+
+.breadcrumb-item {
+  display: inline;
+  color: $gray-800;
+
+  &:not(:first-child)::before {
+    padding-left: 3px;
+    padding-right: 3px;
+    color: inherit;
+    content: '/';
+  }
+}
+
+.breadcrumb-item__active {
+  color: $gray-900;
+}
+
+.breadcrumb-link {
+  color: inherit;
+}
+
+@media (max-width: 767px) {
+  .breadcrumb-wrap {
+    display: none;
+  }
+}

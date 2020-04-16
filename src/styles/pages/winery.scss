@@ -1,0 +1,128 @@
+@import "../base/settings";
+@import "../base/mixins";
+@import "../modules/winery-slider";
+
+.winery {
+  padding-top: 5px;
+  padding-bottom: 3px;
+  overflow-x: hidden;
+}
+
+.winery-nav__list {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  display: flex;
+}
+
+.winery-nav__link {
+  display: block;
+  line-height: 1.3;
+
+  &.active {
+    pointer-events: none;
+  }
+}
+
+.winery-nav__local {
+  font-weight: 500;
+}
+
+.winery-contacts {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.winery-contact__item {
+  margin-bottom: 17px;
+}
+
+.winery-contact__label {
+  margin-bottom: 7px;
+  font-weight: 500;
+  line-height: 1;
+  color: $black;
+}
+
+.form-capture {
+  position: relative;
+
+  .call-form__title {
+    margin-bottom: 15px;
+  }
+}
+
+.winery-map {
+  width: 100%;
+  height: 350px;
+  box-shadow: $custom-box-shadow;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+@media (min-width: 576px) {
+  .winery-nav__link {
+    padding-right: 55px;
+    position: relative;
+    cursor: pointer;
+    transition: color .4s;
+
+    &:not(.active):hover {
+      color: #2d2d2d;
+      text-decoration: none;
+    }
+
+    &.active {
+      font-size: 18px;
+
+      .winery-nav__local {
+        color: $black;
+      }
+    }
+  }
+
+  .winery-content {
+    padding-top: 35px;
+    padding-bottom: 30px;
+  }
+
+  .winery-contact__label {
+    font-size: 18px;
+  }
+
+  .form-capture {
+    max-width: 305px;
+  }
+
+  .form-capture .call-form__btn {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 575px) {
+  .winery-nav__list {
+    overflow: scroll;
+  }
+  .winery-nav__item {
+    flex: none;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  .winery-nav__link.active {
+    color: $black;
+  }
+  .winery-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .form-capture {
+    margin-bottom: 30px;
+  }
+  .form-capture .call-form__btn {
+    min-width: 120px;
+  }
+}

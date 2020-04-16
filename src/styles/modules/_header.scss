@@ -1,0 +1,424 @@
+.header-middle {
+  padding-top: 11px;
+  padding-bottom: 13px;
+  align-items: center;
+}
+
+.header-logo {
+  max-width: 135px;
+  display: block;
+}
+
+.logo-img {
+  max-height: 100%;
+}
+
+.header-search__inner {
+  position: relative;
+  display: flex;
+}
+
+.header-search__decor {
+  top: 8px;
+  fill: $gray-800;
+  position: absolute;
+  transition: opacity .3s;
+}
+
+.header-search__field {
+  width: 100%;
+  height: 31px;
+}
+
+.header-search__close,
+.header-search__clear {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.header-search__close {
+  padding: 3px 5px 3px 13px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+.header-search__close-icon {
+  fill: $red;
+}
+
+.header-search__clear {
+  background-color: $gray;
+  position: absolute;
+  top: 9px;
+  right: 101px;
+  border-radius: 50%;
+  color: #fff;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  line-height: 14px;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+.header-search__btn {
+  padding-top: 0;
+  padding-bottom: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.header-search__active-clear .header-search__clear {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.header-search__active {
+  .header-search__btn,
+  .header-search__close {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  .header-search__btn {
+    pointer-events: auto;
+  }
+
+  .header-search__decor {
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+
+.header-address__icon {
+  width: 23px;
+  height: 23px;
+  margin-right: 3px;
+  fill: $gray-900;
+  flex-shrink: 0;
+}
+
+.header-address__label {
+  padding: 10px 33px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  font-weight: 500;
+  position: relative;
+  z-index: 13;
+  cursor: pointer;
+  color: $black;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  transition: box-shadow .2s ease-out;
+
+  &::after {
+    width: 100%;
+    height: 14px;
+    left: 0;
+    bottom: -8px;
+    position: absolute;
+    background-color: $gray-400;
+    opacity: 0;
+    transition: opacity .2s ease-out;
+    content: '';
+  }
+}
+
+.header-vinotheques {
+  width: 302px;
+  padding: 20px 14px 25px;
+  margin-bottom: 0;
+  top: 100%;
+  z-index: 11;
+  position: absolute;
+  font-size: 16px;
+  line-height: 1.2;
+  background: $gray-400;
+  box-shadow: $custom-box-shadow;
+  list-style: none;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease-out;
+}
+
+.header-vinotheques__item:not(:last-child) {
+  margin-bottom: 20px;
+
+  &::after {
+    width: 70px;
+    height: 1px;
+    margin-top: 23px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $red;
+    display: block;
+    content: '';
+  }
+}
+
+.header-vinotheques__link {
+  display: inline-block;
+  color: $gray-900;
+
+  &:hover {
+    color: $gray-900;
+  }
+}
+
+.header-vinotheques__bold {
+  font-weight: 500;
+  color: $black;
+}
+
+.header-vinotheques__phone {
+  font-size: 14px;
+  font-weight: 600;
+  color: $black;
+  transition: color .3s;
+
+  &:hover {
+    color: $red;
+    text-decoration: none;
+  }
+}
+
+.header-vinotheques__phone-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+  fill: $black;
+  transition: fill .3s;
+}
+
+.header-basket__element {
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: $red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 1;
+    color: #fff;
+    top: -13px;
+    left: 13px;
+    content: attr(data-basket-amount);
+  }
+
+  &[data-basket-amount='0']::after {
+    opacity: 0;
+  }
+}
+
+.header-basket__icon {
+  width: 25px;
+  height: 25px;
+  fill: $black;
+}
+
+.header-address__active {
+  box-shadow: $custom-box-shadow;
+
+  &::after {
+    opacity: 1;
+  }
+
+  + .header-vinotheques {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.header-middle {
+  transition: visibility .5s ease-out, opacity .5s ease-out;
+
+  .top-panel-call {
+    display: none;
+  }
+}
+
+@media (min-width: 1100px) {
+  .header {
+    height: 80px;
+  }
+  .header-search__decor {
+    width: 15px;
+    height: 15px;
+    left: 15px;
+  }
+  .header-search__inner {
+    z-index: 101;
+  }
+  .header-search__field {
+    padding-left: 40px;
+    padding-right: 120px;
+  }
+  .header-search__close {
+    padding-top: 3px;
+    padding-left: 15px;
+  }
+  .header-search__close-icon {
+    width: 15px;
+    height: 15px;
+  }
+  .header-search__clear {
+    right: 120px;
+  }
+  .header-search__btn {
+    padding-left: 30px;
+    padding-right: 30px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .3s;
+  }
+
+  .header-address:hover {
+    .header-address__label {
+      box-shadow: $custom-box-shadow;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    .header-vinotheques {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  .header-menu-toggle,
+  .header-search__view,
+  .header-call {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header-vinotheques {
+    left: 15px;
+    border-top-right-radius: 6px;
+  }
+}
+
+@media (max-width: 1099px) {
+  .header {
+    width: 100%;
+    height: 60px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 20;
+    background-color: #fff;
+    box-shadow: $custom-box-shadow;
+    transition: transform .3s ease-out;
+  }
+
+  .header-middle {
+    padding-top: 13px;
+    padding-bottom: 10px;
+  }
+
+  .header-logo {
+    padding-left: 9px;
+    padding-right: 4px;
+  }
+  .logo-img {
+    height: 40px;
+  }
+
+  .header-search {
+    padding-top: 15px;
+    padding-bottom: 13px;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    background-color: #fff;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .header-address {
+    display: none;
+  }
+
+  .header-call__icon {
+    width: 21px;
+    height: 21px;
+    margin-left: 6px;
+  }
+
+  .header-search__view {
+    text-align: center;
+  }
+
+  .header-search__icon {
+    width: 22px;
+    height: 22px;
+    margin-left: 7px;
+    margin-bottom: 2px;
+  }
+
+  .header-search__opened::before {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .header-basket {
+    text-align: center;
+  }
+  .header-basket__icon {
+    width: 21px;
+    height: 24px;
+  }
+  .header-basket__element::after {
+    width: 15px;
+    height: 15px;
+    font-size: 8px;
+    top: -6px;
+  }
+
+  .header-search__decor {
+    width: 12px;
+    height: 12px;
+    left: 13px;
+  }
+  .header-search__field {
+    padding-left: 30px;
+    padding-right: 95px;
+  }
+  .header-search__close-icon {
+    width: 12px;
+    height: 12px;
+  }
+  .header-search__btn {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .header-vinotheques {
+    right: 15px;
+    border-top-left-radius: 6px;
+  }
+}

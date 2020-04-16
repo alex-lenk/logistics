@@ -1,0 +1,157 @@
+@import "../base/settings";
+@import "../base/mixins";
+
+.page-404 {
+  position: relative;
+
+  &::before {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 15px;
+    position: absolute;
+    overflow: hidden;
+    background: url(../img/media/404-mob.jpg) no-repeat center;
+    content: '';
+  }
+}
+
+.page-404-title--lg {
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.3;
+  display: block;
+}
+
+.page-404-text {
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.page-404-box {
+  position: relative;
+  z-index: 2;
+}
+
+.page-404-nav {
+  display: flex;
+}
+
+@media (min-width: 1200px) {
+  .page-404 {
+    height: 797px;
+
+    &::before {
+      max-width: 1170px;
+      max-height: 797px;
+    }
+  }
+  .page-404-box {
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .page-404 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 76px;
+    padding-bottom: 50px;
+
+    &::before {
+      border-radius: 30px;
+      background-image: url(../img/media/404.jpg);
+    }
+  }
+  .page-404-title--lg {
+    font-size: 66px;
+  }
+  .page-404-text {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-404-nav {
+    padding-top: 30px;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-404-nav {
+    flex-direction: column;
+  }
+  .btn-secondary.page-404-nav__link {
+    margin-bottom: 15px;
+    color: $gray-900;
+    padding: 0;
+    line-height: 1;
+    border-radius: 0;
+    border-bottom: 1px solid;
+    align-self: flex-start;
+
+    &:before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .page-404 {
+    height: 377px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    &::before {
+      max-width: calc(100% - 30px);
+      border-radius: 15px;
+      background-size: cover;
+      background-position-y: bottom;
+    }
+  }
+  .page-404-box {
+    padding-left: 30px;
+  }
+  .page-404-title {
+    margin-bottom: 2px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .page-404 {
+    height: 600px;
+
+    &::before {
+      max-width: 490px;
+      max-height: 600px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .page-404 {
+    height: 700px;
+
+    &::before {
+      max-height: 700px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .page-404::before {
+    max-width: 690px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .page-404::before {
+    max-width: 930px;
+  }
+}

@@ -1,0 +1,233 @@
+.nav-bar-info {
+  width: 80%;
+  padding-bottom: 30px;
+  background-color: #fff;
+}
+
+@media (min-width: 1100px) {
+  .nav-bar {
+    display: none;
+  }
+}
+
+@media (max-width: 1099px) {
+  .menu-opened {
+    overflow: hidden;
+
+    body::before {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .nav-bar {
+      transform: translateX(0);
+    }
+
+    .header {
+      transform: translateX(100%);
+    }
+  }
+
+  .nav-bar {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    position: fixed;
+    line-height: 1;
+    font-size: 14px;
+    overflow-y: scroll;
+    transform: translateX(-100%);
+    transition: transform .3s ease-out;
+  }
+
+  .nav-bar-panel {
+    width: 100%;
+    height: 60px;
+    padding-left: 14px;
+    padding-right: 14px;
+    position: relative;
+    z-index: 5;
+    background-color: #fff;
+    box-shadow: $custom-box-shadow-2;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-bar-panel__back {
+    height: inherit;
+    font-size: 13px;
+    line-height: 1;
+    color: $black;
+    display: inherit;
+    align-items: inherit;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s ease-out;
+  }
+
+  .nav-bar-panel__back-icon {
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+  }
+
+  .nav-bar-panel__title {
+    padding-left: 0;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: $black;
+  }
+
+  .nav-bar-content {
+    width: 80%;
+    background-color: #fff;
+    position: relative;
+  }
+
+  .nav-bar-content__close {
+    width: 20%;
+    height: 100%;
+    top: 0;
+    left: 100%;
+    position: absolute;
+  }
+
+  .nav-bar-list {
+    padding-left: 0;
+    margin-bottom: 0;
+    padding-bottom: 25px;
+    list-style: none;
+  }
+
+  .nav-bar-head {
+    margin-bottom: 11px;
+    background-color: $gray-700;
+    overflow: hidden;
+  }
+
+  .nav-bar-head__icon {
+    width: 15px;
+    height: 15px;
+    margin-left: auto;
+    fill: $black;
+    transform: rotate(90deg);
+  }
+
+  .nav-bar-point {
+    height: 44px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: $black;
+    border-bottom: 1px solid $gray-700;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-bar-point__link {
+    width: 100%;
+    height: inherit;
+    color: inherit;
+    display: inherit;
+    align-items: inherit;
+  }
+
+  .nav-bar-point__arrow {
+    width: 12px;
+    height: 12px;
+    margin-left: auto;
+    fill: $black;
+  }
+
+  .nav-bar__text-action {
+    color: $red;
+    font-weight: 500;
+  }
+
+  .nav-bar-support {
+    padding-left: 15px;
+  }
+
+  .nav-bar-support__label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: $black;
+  }
+
+  .nav-bar-support__link {
+    color: inherit;
+  }
+
+  .nav-bar-about {
+    padding: 25px 15px 1px;
+    color: $gray-900;
+    font-size: 12px;
+    line-height: 1.4;
+    background-color: $black;
+  }
+
+  .nav-bar-about__box {
+    margin-bottom: 30px;
+  }
+
+  .nav-bar-about__title {
+    display: flex;
+    align-items: center;
+
+    &:not(.collapsed) .nav-bar-about__arrow {
+      transform: rotate(-90deg);
+    }
+
+    &.collapsed .nav-bar-about__arrow {
+      transform: rotate(90deg);
+    }
+  }
+
+  .nav-bar-about__icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    fill: $gray-900;
+  }
+
+  .nav-bar-about__arrow {
+    width: 11px;
+    height: 11px;
+    margin-left: auto;
+    margin-right: 7px;
+    fill: $gray-900;
+  }
+
+  .nav-bar-about__media {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .nav-bar-about__body {
+    padding-top: 15px;
+  }
+
+  .nav-bar-layer {
+    width: 100%;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: transform .3s ease-out;
+  }
+
+  .nav-bar-panel__opened .nav-bar-panel__back {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-bar-layer__opened .nav-bar-layer {
+    transform: translateX(0);
+  }
+}

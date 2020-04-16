@@ -1,0 +1,51 @@
+.hide-placeholder {
+  @include hidePlaceholder {
+    color: $gray-800;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+  }
+
+  &:focus {
+    @include hidePlaceholder {
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+  }
+}
+
+.form-group-prepend {
+  position: relative;
+}
+
+.form-group-prepend__field {
+  padding-left: 30px;
+  background-color: $gray-400;
+}
+
+.form-group-prepend__icon {
+  width: 15px;
+  height: 15px;
+  margin-top: -8px;
+  top: 50%;
+  left: 11px;
+  position: absolute;
+  fill: $gray-800;
+}
+
+.form-errors-text {
+  font-size: 13px;
+}
+
+.form-group__error {
+  input {
+    border: 1px solid red !important;
+  }
+}
+
+@media (max-width: 1099px) {
+  .hide-placeholder {
+    @include hidePlaceholder {
+      font-size: 13px;
+    }
+  }
+}

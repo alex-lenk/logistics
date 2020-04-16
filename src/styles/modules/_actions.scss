@@ -1,0 +1,118 @@
+.action-item {
+  max-height: 385px;
+  display: block;
+  position: relative;
+  box-shadow: $custom-box-shadow;
+  border-radius: 12px;
+  overflow: hidden;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.action-item__content {
+  background: rgba(38, 38, 38, 0.7);
+  border-radius: 7px;
+  position: absolute;
+}
+
+.action-item__title {
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.card-detail {
+  position: relative;
+  margin-bottom: 30px;
+  @include clearfix;
+}
+
+@media (min-width: 768px) {
+  .action-item {
+    margin-bottom: 30px;
+  }
+  .action-item__content {
+    margin-right: 30px;
+    padding: 35px 20px;
+    top: 35px;
+    left: 35px;
+  }
+  .action-item__title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 36px;
+  }
+  .card-detail__item-label {
+    color: $black;
+  }
+  .card-detail__list {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card-detail__item:first-child {
+    padding-right: 30px;
+    min-width: 200px;
+  }
+  .action-item .component-sticker,
+  .card-detail__item .component-sticker {
+    width: 66px;
+    height: 26px;
+    font-size: 12px;
+  }
+  .card-detail__item-label {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 767px) {
+  .action-item {
+    margin-bottom: 14px;
+
+    .component-sticker {
+      width: 45px;
+      height: 20px;
+      font-size: 10px;
+    }
+  }
+  .action-item__title {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: 18px
+  }
+  .action-item__content {
+    margin-right: 14px;
+    padding: 14px;
+    top: 14px;
+    left: 14px;
+  }
+  .action-item__data {
+    font-size: 13px;
+  }
+  .card-detail .component-sticker {
+    width: 45px;
+    height: 20px;
+    font-size: 10px;
+  }
+
+  .card-detail__list {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(38, 38, 38, 0.7);
+    border-radius: 7px;
+    color: #fff;
+    padding: 14px;
+  }
+  .card-detail__item-label {
+    display: none;
+  }
+  .card-detail__item:first-child {
+    margin-bottom: 10px;
+  }
+}

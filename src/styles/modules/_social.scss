@@ -1,0 +1,99 @@
+.social-page {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  line-height: 1;
+  display: flex;
+}
+
+.social-page__item {
+  display: inline-block;
+  vertical-align: middle;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.social-page__icon {
+  width: 40px;
+  height: 40px;
+  fill: #475993;
+}
+
+.social-page__icon-instagram::before {
+  background: url(/local/templates/wineexpress/img/icon/icon-instagram.svg) no-repeat center;
+}
+
+.social-page__icon-zen::before {
+  background: url(/local/templates/wineexpress/img/icon/zen.svg) no-repeat center;
+}
+
+.social-page__icon-instagram,
+.social-page__icon-zen {
+  &::before {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-size: contain;
+    content: '';
+  }
+}
+
+.social-footer {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  line-height: 1;
+  display: flex;
+}
+
+.social-footer__item {
+  display: inline-block;
+  vertical-align: middle;
+  transition: opacity .3s;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.social-footer__icon {
+  width: 31px;
+  height: 31px;
+  fill: #eee;
+}
+
+.social-footer__icon-zen {
+  width: 31px;
+  height: 31px;
+  display: block;
+  background: url(/local/templates/wineexpress/img/icon/zen-white.svg) no-repeat center;
+  background-size: contain;
+  content: '';
+}
+
+@media (min-width: 576px) {
+  .social-footer {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 1099px) {
+  .social-color {
+    padding-left: 8px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .social-footer {
+    margin-right: auto;
+    margin-left: auto;
+    order: 1;
+  }
+}

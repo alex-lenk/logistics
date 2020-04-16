@@ -1,0 +1,29 @@
+.previously-viewed h2 {
+  text-align: center;
+}
+
+.previously-viewed__carousel .slick-track {
+  min-width: 100%;
+}
+
+@media (min-width: 576px) {
+  .previously-viewed h2 {
+    margin-bottom: 30px;
+  }
+  .previously-viewed__carousel .catalog-item {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .previously-viewed__carousel .catalog-item:not(.catalog-item__product) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .previously-viewed h2 {
+    margin-bottom: 10px;
+  }
+}

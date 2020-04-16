@@ -1,0 +1,102 @@
+
+.accordion-card {
+  margin-bottom: 11px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: $custom-box-shadow-2;
+}
+
+.accordion-title {
+  margin-bottom: 0;
+  padding: 10px 15px 9px 51px;
+  font-size: 14px;
+  position: relative;
+  cursor: pointer;
+  border-radius: inherit;
+  background-color: $gray-400;
+  box-shadow: inherit;
+
+  &::before {
+    border-top: 1px solid #333;
+    border-left: 1px solid #333;
+    display: block;
+    position: absolute;
+    margin-top: -6px;
+    top: 50%;
+    content: '';
+  }
+
+  &::after {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 11px;
+    margin-top: -11px;
+    border-radius: 50%;
+    box-shadow: $custom-box-shadow-2;
+    transition: border .4s ease-in-out;
+    content: '';
+  }
+
+  &.collapsed::before {
+    transform: rotate(-135deg);
+  }
+
+  &:not(.collapsed)::before {
+    transform: rotate(45deg);
+    margin-top: -3px;
+  }
+}
+
+.accordion-title:not(.collapsed) {
+  margin-bottom: 15px;
+  border-bottom: 1px solid $gray-700;
+}
+
+.accordion-body {
+  padding: 16px;
+  a {
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 576px) {
+  .accordion-card {
+    border-radius: 12px;
+  }
+  .accordion-title {
+    padding: 19px 15px 14px 99px;
+    font-size: 24px;
+
+    &::before {
+      width: 11px;
+      height: 11px;
+      border-top-width: 2px;
+      border-left-width: 2px;
+      left: 30px;
+      margin-top: -7px;
+    }
+
+    &::after {
+      width: 37px;
+      height: 37px;
+      left: 16px;
+      margin-top: -19px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .faq-section {
+    overflow: hidden;
+  }
+  .accordion-title::before {
+    width: 7px;
+    height: 7px;
+    left: 18px;
+  }
+  .accordion-body {
+    font-size: 14px;
+  }
+}

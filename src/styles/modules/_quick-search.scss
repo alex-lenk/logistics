@@ -1,0 +1,208 @@
+.ui-autocomplete {
+  padding-top: 15px;
+  background-color: #FBFBFB;
+  box-shadow: $custom-box-shadow-2;
+
+  .quick-search-item {
+    padding: 10px 15px;
+    margin: 0;
+  }
+
+  .btn-all {
+    min-width: 200px
+  }
+}
+
+.quick-search-item {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: all .3s;
+
+  &:hover {
+    background-color: #fff;
+    box-shadow: $custom-box-shadow-2;
+  }
+}
+
+.panel__preview_bottom {
+  margin: 7px 0 0 !important;
+  padding-top: 12px !important;
+  padding-bottom: 15px !important;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-search-inner {
+  padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+
+  &:hover {
+    text-decoration: none;
+
+    .quick-search-meta,
+    .quick-search-price__old {
+      color: $gray-900;
+    }
+
+    .quick-search-title {
+      color: $black;
+    }
+  }
+}
+
+.quick-search-media {
+  width: 20%;
+  padding-right: 15px;
+  text-align: center;
+}
+
+.quick-search-content {
+  width: 80%;
+}
+
+.quick-search-meta {
+  margin-bottom: 7px;
+  font-size: 13px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+
+  .component-sticker {
+    margin-left: 12px;
+
+    + .component-sticker {
+      margin-top: 0;
+    }
+  }
+}
+
+.quick-search-title {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $black;
+}
+
+.quick-search-panel {
+  display: flex;
+  align-items: center;
+}
+
+.quick-search-price {
+  margin-left: auto;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.quick-search-price__old {
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.quick-search-price__new {
+  color: $black;
+}
+
+.quick-search-options {
+  margin-left: -3px;
+  margin-right: -3px;
+  display: flex;
+  align-items: center;
+
+  .snippet-card-option__2102,
+  .snippet-card-option__dry {
+    .tooltip-custom::before {
+      content: 'Сухое';
+    }
+  }
+
+  .snippet-card-option__semidry,
+  .snippet-card-option__2101 {
+    .tooltip-custom::before {
+      content: 'Полусухое';
+    }
+  }
+
+  .snippet-card-option__semisweet {
+    .tooltip-custom::before {
+      content: 'Полусладкое';
+    }
+  }
+
+  .snippet-card-option__2099,
+  .snippet-card-option__sweet {
+    .tooltip-custom::before {
+      content: 'Сладкое';
+    }
+  }
+
+  .snippet-card-option__2135,
+  .snippet-card-option__brut {
+    .tooltip-custom::before {
+      content: 'Брют';
+    }
+  }
+
+  .snippet-card-option__extrabrut .tooltip-custom::before {
+    content: 'Экстрабрют';
+  }
+
+  .snippet-card-option__2096,
+  .snippet-card-option__red {
+    .tooltip-custom::before {
+      content: 'Красное';
+    }
+  }
+
+  .snippet-card-option__2097,
+  .snippet-card-option__white {
+    .tooltip-custom::before {
+      content: 'Белое';
+    }
+  }
+
+  .snippet-card-option__2098,
+  .snippet-card-option__pink,
+  .snippet-card-option__roze {
+    .tooltip-custom::before {
+      content: 'Розовое';
+    }
+  }
+}
+
+.preUpLoader {
+  padding-bottom: 10px;
+  list-style: none;
+}
+
+@media (min-width: 1100px) {
+  .ui-autocomplete {
+    width: 465px;
+    margin-left: -285px;
+    top: 98px;
+    left: 50%;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+}
+
+@media (max-width: 1099px) {
+  .ui-autocomplete {
+    width: 100%;
+    top: 60px;
+    left: 0;
+    position: fixed;
+    overflow-y: scroll;
+    max-height: 89vh;
+  }
+  .quick-search-options {
+    font-size: 13px;
+
+    .tooltip-custom::before {
+      margin-left: 5px;
+    }
+  }
+}

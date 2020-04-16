@@ -1,0 +1,79 @@
+.basket-confirm ~ .events-list {
+  margin-bottom: 30px;
+}
+
+.basket-confirm__order {
+  margin-bottom: 30px;
+}
+
+.basket-confirm__text {
+  line-height: 1.3;
+}
+
+.basket-confirm__go {
+  min-width: 120px;
+}
+
+@media (min-width: 576px) {
+  .basket-confirm {
+    height: 481px;
+    box-shadow: $custom-box-shadow;
+    border-radius: 12px;
+    background: url(/local/templates/wineexpress/img/media/order-successfully.jpg) no-repeat center;
+  }
+
+  .basket-confirm__order .basket-confirm__go {
+    display: none;
+  }
+
+  .basket-confirm__nav {
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  .basket-confirm__go {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .basket-confirm__content {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .basket-confirm__text {
+    font-size: 20px;
+  }
+
+  @media (min-width: 1200px) {
+    .basket-confirm {
+      padding: 50px 40px;
+    }
+
+  }
+}
+
+@media (max-width: 575px) {
+
+  .basket-confirm__nav .basket-confirm__go {
+    display: none;
+  }
+  .basket-confirm__text {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1199px) {
+  .basket-confirm {
+    padding: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .basket-confirm__content {
+    max-width: 75%;
+  }
+}
