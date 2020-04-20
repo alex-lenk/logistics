@@ -1,0 +1,92 @@
+@@include("blocks/header.html")
+
+<div class="distribution-header container">
+    <h1 class="page-title">Дистрибуция</h1>
+    <div class="page-pre-title">
+        Alianta Group&nbsp;&mdash; официальный представитель Вашей компании на&nbsp;территории&nbsp;РФ
+    </div>
+    <ul class="distribution-header__list">
+        <li class="distribution-header__item-federal distribution-header__item">
+            <div class="distribution-header__item-title">Федеральные и&nbsp;локальные сети</div>
+            <div class="distribution-header__item-content">
+                <p>
+                    Alianta Group работает напрямую со&nbsp;всеми ведущими федеральными и&nbsp;локальными сетями России.
+                </p>
+                <p>
+                    Например, ежегодные объемы поставок в&nbsp;X5&nbsp;Retail Group составляют более 11&nbsp;млн. бутылок СТМ.
+                </p>
+            </div>
+        </li>
+        <li class="distribution-header__item-retail distribution-header__item">
+            <div class="distribution-header__item-title">Розничные торговые точки</div>
+            <div class="distribution-header__item-content">
+                <p>
+                    Продукция представлена более, чем в&nbsp;5&nbsp;000 розничных магазинах в&nbsp;60&nbsp;регионах страны.
+                </p>
+            </div>
+        </li>
+        <li class="distribution-header__item-hoteca distribution-header__item">
+            <div class="distribution-header__item-title">HoReCa</div>
+            <div class="distribution-header__item-content">
+                <p>
+                    Рестораны и&nbsp;отели выбирают поставщиков вина из&nbsp;узкого круга компаний, в&nbsp;который входит Alianta Group.
+                </p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+<div class="calculator">
+    <div class="container">
+        <h2 class="calculator-title">Узнайте, какая цена будет на&nbsp;вашу продукцию на&nbsp;полке:</h2>
+
+        <div class="calculator-form">
+            <div class="calculator-form__group">
+                <label class="calculator-form__label" for="calc-price">Введите цену за&nbsp;1&nbsp;бутылку в&nbsp;₽</label>
+                <input type="text" class="form-control hide-placeholder" placeholder="Отпускная цена" id="calc-price">
+            </div>
+            <div class="calculator-form__group">
+                <label class="calculator-form__label" for="calc-region">Укажите откуда забрать вино</label>
+                <select class="form-control" name="" id="calc-region">
+                    <option value="6.5">Краснодарский край</option>
+                    <option value="7.5">Крым</option>
+                    <option value="7.5">Севастополь</option>
+                    <option value="7.5">Симферополь</option>
+                    <option value="6.5">Долина Дона</option>
+                    <option value="6.5">Кубань. Анапа</option>
+                    <option value="6.5">Кубань. Геленджик</option>
+                    <option value="6.5">Кубань. Крымск</option>
+                    <option value="6.5">Кубань. Новороссийск</option>
+                    <option value="6.5">Кубань. Таманский полуостров</option>
+                </select>
+            </div>
+            <div class="calculator-form__group">
+                <label class="calculator-form__label" for="calc-direction">Выберите направление торговли</label>
+                <select class="form-control" name="" id="calc-direction">
+                    <option value="1.5">Розница</option>
+                    <option value="1.8">Horeca</option>
+                    <option value="1.5">Федеральные сети</option>
+                </select>
+            </div>
+            <button type="button" class="calculator-form__btn btn-primary btn" id="calc-calculate">Рассчитать</button>
+        </div>
+
+        <div class="calculator-total" id="calc-ressection">
+            <div class="calculator-total__title">Итого:</div>
+            <div class="calculator-total__line">
+                <div class="calculator-total__label">Отпускная цена Alianta Group за 1 бутылку (Цена в прайс-листе
+                    Alianta Group):</div>
+                <div class="calculator-total__result" id="calc-result1">100 р.</div>
+            </div>
+            <div class="calculator-total__line">
+                <div class="calculator-total__label">Отпускная цена конечного клиента за 1 бутылку (Цена, которую видит покупатель):</div>
+                <div class="calculator-total__result" id="calc-result2">200 р.</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@@include("blocks/footer.html")
