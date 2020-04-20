@@ -3,7 +3,15 @@
 
 $(document).ready(function () {
     $('#call-form__tel').mask("+7 (999) 999-99-99");
+
+    $('.menu-toggle').click(function () {
+        $('body').toggleClass('menu-opened');
+        //$('.menu-nav__inner').toggleClass('menu-nav__inner-open');
+    });
+
+    $('.home-company__media .media-wrap').appendTo('.home-company__pre-title');
 });
+
 /*
 * 0.
 * 1.

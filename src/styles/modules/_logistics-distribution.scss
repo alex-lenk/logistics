@@ -12,8 +12,6 @@
 .logistics-distribution__item {
   max-width: 50%;
   flex-basis: 50%;
-  display: flex;
-  align-items: center;
 
   &::before {
     background-position: center;
@@ -53,4 +51,24 @@
 
 .logistics-distribution__list-item:not(:last-child) {
   margin-bottom: 12px;
+}
+
+@media (min-width: 992px) {
+  .logistics-distribution__item {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 991px) {
+  .logistics-distribution__item {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &::before {
+      height: 200px;
+      display: block;
+      margin: 0 auto 15px;
+    }
+  }
 }

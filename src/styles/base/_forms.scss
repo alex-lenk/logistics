@@ -15,8 +15,6 @@
 }
 
 .form-group-prepend {
-  width: 25%;
-  margin-right: 3%;
   padding-right: 15px;
   position: relative;
 
@@ -48,9 +46,15 @@
   font-size: 13px;
 }
 
-.form-group__error {
-  input {
-    border: 1px solid red !important;
+.form-group__error input {
+  border: 1px solid red !important;
+}
+
+@media (min-width: 992px) {
+  .form-group-prepend {
+    max-width: 26%;
+    flex-basis: 26%;
+    margin-right: 28px;
   }
 }
 
@@ -59,5 +63,19 @@
     @include hidePlaceholder {
       font-size: 13px;
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .form-group-prepend {
+    margin-bottom: 20px
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .form-group-prepend {
+    max-width: 46%;
+    flex-basis: 46%;
+    margin: 0 14px 25px;
   }
 }

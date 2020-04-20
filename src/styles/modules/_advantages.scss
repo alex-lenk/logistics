@@ -26,8 +26,6 @@
   font-size: 16px;
   line-height: 22px;
   color: $black;
-  display: flex;
-  align-items: center;
 
   &::before {
     width: 100px;
@@ -54,4 +52,31 @@
   width: 120px;
   height: 69px;
   background-image: url(../img/advantages/price-formation.svg);
+}
+
+@media (min-width: 992px) {
+  .advantages-list__item {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 991px) {
+  .advantages-list__item {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+
+    &::before {
+      height: 100px;
+      display: block;
+      margin: 0 auto 15px;
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .advantages-list__item {
+    font-size: 15px
+  }
 }
