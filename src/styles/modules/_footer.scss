@@ -1,6 +1,4 @@
 .footer {
-  padding-top: 50px;
-  padding-bottom: 50px;
   background-color: $black;
   color: #bbb;
   text-align: center;
@@ -8,22 +6,13 @@
 
 .footer-title {
   margin-bottom: 10px;
-  font-size: 24px;
   font-weight: 500;
   color: #eee;
 }
 
 .footer-list {
-  margin-bottom: 23px;
-  font-size: 18px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-}
-
-.footer-item {
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
 .footer-link {
@@ -40,7 +29,6 @@
 
   &::before,
   &::after {
-    width: 40%;
     height: 2px;
     background-color: #717171;
     content: '';
@@ -71,4 +59,65 @@
   width: 31px;
   height: 31px;
   fill: #eee;
+}
+
+@media (min-width: 576px) {
+  .footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .footer-title {
+    font-size: 24px;
+  }
+  .footer-list {
+    margin-bottom: 23px;
+    font-size: 18px;
+    justify-content: center;
+  }
+  .footer-item {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .social-footer {
+    margin-bottom: 35px;
+
+    &::before,
+    &::after {
+      width: 40%;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .footer {
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+  .footer-title {
+    font-size: 18px;
+  }
+  .footer-list {
+    margin-bottom: 28px;
+    font-size: 14px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .footer-item {
+    max-width: 50%;
+    flex-basis: 50%;
+    padding-left: 7px;
+    padding-right: 7px;
+    text-align: left;
+  }
+  .social-footer {
+    margin-bottom: 30px;
+
+    &::after,
+    &::before {
+      width: 30%;
+    }
+  }
+  .copy {
+    font-size: 14px;
+  }
 }

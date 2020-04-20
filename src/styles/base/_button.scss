@@ -1,5 +1,4 @@
 .btn {
-  height: 40px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -112,6 +111,9 @@
 }
 
 @media (min-width: 576px) {
+  .btn {
+    height: 40px;
+  }
   .btn-primary {
     height: 40px;
     padding-top: 7px;
@@ -127,6 +129,7 @@
 
 @media (max-width: 575px) {
   .btn {
+    height: 34px;
     font-size: 13px;
   }
 }

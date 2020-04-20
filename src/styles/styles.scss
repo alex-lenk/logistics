@@ -15,3 +15,8 @@
 @import "modules/official-partners";
 @import "modules/footer";
 
+@media (max-width: 575px) {
+  .hidden-xs {
+    display: none;
+  }
+}
