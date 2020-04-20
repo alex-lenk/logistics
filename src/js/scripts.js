@@ -6,22 +6,9 @@ $(document).ready(function () {
 
     $('.menu-toggle').click(function () {
         $('body').toggleClass('menu-opened');
-        //$('.menu-nav__inner').toggleClass('menu-nav__inner-open');
     });
 
-    $('.home-company__media .media-wrap').appendTo('.home-company__pre-title');
+    if ($(window).width() < 575) {
+        $('.home-company__media .media-wrap').appendTo('.home-company__pre-title');
+    }
 });
-
-/*
-* 0.
-* 1.
-* 2.
-* 3.
-* 4.
-* 5.
-* 6.
-* 7.
-* 8.
-* 9.
-* 10.
-*/
