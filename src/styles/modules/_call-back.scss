@@ -7,13 +7,8 @@
   display: none;
 }
 
-.call-back__gray {
-  background-color: #FBFBFB;
-  box-shadow: 0 0 10px rgba(69, 74, 113, 0.4);
-}
-
 @media (min-width: 576px) {
-  .call-back:not(.call-back__gray) {
+  .call-back:not(.strip-block) {
     padding-top: 90px;
     padding-bottom: 90px;
   }

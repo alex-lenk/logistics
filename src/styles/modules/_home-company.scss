@@ -16,10 +16,6 @@
 @media (min-width: 576px) {
   .home-company {
     margin-bottom: 100px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background: $gray-400;
-    box-shadow: $custom-box-shadow;
   }
   .home-company__inner {
     padding-left: 0;
@@ -31,6 +27,8 @@
   .home-company {
     margin-bottom: 70px;
     padding-top: 70px;
+    background-color: #fff;
+    box-shadow: none;
   }
   .home-company__inner {
     padding-left: 7px;

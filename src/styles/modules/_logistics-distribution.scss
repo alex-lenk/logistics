@@ -29,12 +29,6 @@
 }
 
 @media (min-width: 576px) {
-  .logistics-distribution {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background: $gray-400;
-    box-shadow: $custom-box-shadow;
-  }
   .logistics-distribution__inner {
     display: flex;
   }
@@ -74,6 +68,8 @@
 @media (max-width: 575px) {
   .logistics-distribution {
     margin-bottom: 70px;
+    background-color: #fff;
+    box-shadow: none;
   }
   .logistics-distribution__list {
     margin-bottom: 20px;

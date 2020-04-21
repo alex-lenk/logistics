@@ -7,7 +7,7 @@
   height: 60px;
   background-image: url(../img/sprites-advantages.png);
   background-repeat: no-repeat;
-  background-size: 180px 120px;
+  background-size: 180px 176px;
   display: block;
   content: '';
 }
@@ -36,7 +36,11 @@
   @include stitches-sprite(-120px, -60px);
 }
 
-.advantages-list {
+.sprite-icon-07::before {
+  @include stitches-sprite(17px, -121px);
+}
+
+.list-advantages {
   padding-top: 15px;
   padding-left: 0;
   margin-bottom: 0;
@@ -44,9 +48,36 @@
   text-align: center;
 }
 
-.advantage-list__item {
+.list-advantages__item {
   line-height: 1.3;
+
   &::before {
     margin: 0 auto 11px;
+  }
+}
+
+@media (min-width: 992px) {
+  .list-advantages__wrap {
+    margin-bottom: 90px;
+  }
+
+  .list-advantages__item {
+    max-width: calc(100% / 7);
+    flex-basis: calc(100% / 7);
+  }
+}
+
+@media (max-width: 991px) {
+  .list-advantages__wrap {
+    margin-bottom: 40px;
+  }
+
+  .list-advantages__item {
+    max-width: 50%;
+    flex-basis: 50%;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
   }
 }

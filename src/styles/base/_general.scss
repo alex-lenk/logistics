@@ -142,6 +142,19 @@ a:focus {
   font-weight: 500;
 }
 
+.strip-block {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $gray-400;
+  box-shadow: $custom-box-shadow;
+}
+
+@media (min-width: 768px) {
+  .show-to-sm {
+    display: none;
+  }
+}
+
 @media (min-width: 576px) {
   h1, .h1, h2, .h2, h3, .h3,
   h4, .h4, h5, .h5, h6, .h6 {
@@ -178,7 +191,7 @@ a:focus {
     margin-bottom: 10px;
   }
   .page-pre-title {
-    margin-bottom: 44px;
+    margin-bottom: 10px;
     font-size: 24px;
     line-height: 32px;
   }
