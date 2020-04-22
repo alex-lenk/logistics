@@ -1,0 +1,45 @@
+.table {
+  display: table;
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-collapse: collapse;
+}
+
+.table-header-group {
+  display: table-header-group;
+
+  .table-cell {
+    background-color: #B8B8B8;
+    vertical-align: bottom;
+    text-align: inherit;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.table-row {
+  display: table-row;
+
+  &:nth-child(even) {
+    background-color: #eee;
+  }
+}
+
+.table-cell {
+  display: table-cell;
+  padding: .75rem;
+  vertical-align: top;
+  border: 1px solid #828282;
+  color: $black;
+  font-weight: 500;
+}
+
+.table-row-group {
+  display: table-row-group;
+
+  .table-cell {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}

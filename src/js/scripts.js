@@ -2,6 +2,7 @@
 //= vendor/jquery.maskedinput.min.js
 //= vendor/baguetteBox.min.js
 //= vendor/glider.min.js
+//= vendor/tab.js
 
 $(document).ready(function () {
     $('#call-form__tel').mask("+7 (999) 999-99-99");

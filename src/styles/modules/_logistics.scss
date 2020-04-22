@@ -1,0 +1,137 @@
+.logistics-header {
+  margin-bottom: 50px;
+  padding-top: 50px;
+  position: relative;
+
+  .page-pre-title {
+    margin-bottom: 54px;
+  }
+
+  &::before {
+    width: 438px;
+    height: 288px;
+    position: absolute;
+    bottom: -9px;
+    right: 176px;
+    background: url(../img/logistics/logistics-01.svg) no-repeat center;
+    background-size: contain;
+    content: '';
+  }
+
+  .distribution-content__list {
+    max-width: 523px;
+  }
+}
+
+.logistics-services {
+  margin-bottom: 100px;
+  height: 318px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &::before {
+    width: 354px;
+    height: inherit;
+    margin: 0 0 0 6%;
+    background: url(../img/logistics/logistics-05.svg) no-repeat center;
+    background-size: contain;
+    content: '';
+  }
+}
+
+.logistics-stage {
+  margin-bottom: 100px;
+
+  .page-title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+.logistics-stage__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &::before {
+    width: 100%;
+    height: 256px;
+    margin: 0 auto 30px;
+    display: block;
+    background: url(../img/logistics/logistics-03.svg) no-repeat center;
+    content: '';
+  }
+}
+
+.logistics-stage__list-item {
+  .btn {
+    height: auto;
+    padding: 5px 9px 4px;
+  }
+}
+
+.logistics-stage__list-title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: $black
+}
+
+.computation {
+  margin-bottom: 99px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &::after {
+    width: 388px;
+    height: 373px;
+    margin-left: 4%;
+    display: block;
+    background: url(../img/logistics/logistics-02.svg) no-repeat center;
+    content: '';
+  }
+}
+
+.computation-box {
+  width: 50%;
+}
+
+.computation-text {
+  max-width: 80%;
+  margin-top: 23px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  order: 1;
+}
+
+.logistics-cost {
+  margin-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #FBFBFB;
+  box-shadow: 0 0 10px rgba(69, 74, 113, 0.4);
+}
+
+.logistics-cost__inner {
+  display: flex;
+}
+
+.logistics-cost__table,
+.logistics-cost__content {
+  max-width: 50%;
+  flex-basis: 50%;
+}
+
+.logistics-cost__table {
+  padding-top: 25px;
+  padding-right: 15px;
+}
+
+.logistics-cost__content {
+  padding-left: 15px;
+}
