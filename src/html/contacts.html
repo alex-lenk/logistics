@@ -1,0 +1,106 @@
+@@include("blocks/header.html")
+
+<div class="contacts container">
+    <h1 class="page-title">Контакты</h1>
+    <div class="page-pre-title">По всем вопросам вы можете обратиться к нашим сотрудникам:</div>
+    <div class="contacts-personal row">
+        <div class="contacts-personal__item col-lg-6">
+            <img src="img/media/personal-01.jpg" class="contacts-personal__media" alt="">
+            <div class="contacts-personal__box">
+                <div class="contacts-personal__name">Танков Андрей</div>
+                <div class="contacts-personal__post">Директор по логистике</div>
+                <div class="contacts-personal__data">
+                    <span class="text-bold">E-mail:</span> <a href="mailto:tankov.a@alianta.ru">tankov.a@alianta.ru</a>
+                </div>
+                <div class="contacts-personal__data">
+                    <span class="text-bold">Тел:</span> <a href="tel:+74997500057" rel="nofollow">+7 (499) 750 00 57</a>
+                    <br class="hidden-xs">
+                    добавочный 151
+                </div>
+            </div>
+        </div>
+        <div class="contacts-personal__item col-lg-6">
+            <img src="img/media/personal-02.jpg" class="contacts-personal__media" alt="">
+            <div class="contacts-personal__box">
+                <div class="contacts-personal__name">Дроздова Надежда</div>
+                <div class="contacts-personal__post">Старший продакт-менеджер</div>
+                <div class="contacts-personal__data">
+                    <span class="text-bold">E-mail:</span> <a href="mailto:drozdova.n@alianta.ru">drozdova.n@alianta.ru</a>
+                </div>
+                <div class="contacts-personal__data">
+                    <span class="text-bold">Тел:</span> <a href="tel:+74956519080" rel="nofollow">+7 (495) 651 90 80</a>
+                    <br class="hidden-xs">
+                    добавочный 0166
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="call-back strip-block">
+    <div class="container">
+        <h2 class="call-back__title section-title">Вы так же можете<br class="show-to-sm"> заказать обратный звонок</h2>
+        <div class="call-back__text">
+            Обращаясь к&nbsp;специалистам Alianta Group в&nbsp;области логистики вин и&nbsp;алкогольной<br class="hidden-xs">
+            продукции узнайте, как мы&nbsp;можем помочь вашему бизнесу.
+        </div>
+
+        <form class="call-form">
+            <div class="form-group-prepend">
+                <label class="sr-only" for="call-form__name">Ваше имя</label>
+                <svg class="form-group-prepend__icon">
+                    <use xlink:href="img/icons.svg#user"></use>
+                </svg>
+                <input type="text" id="call-form__name" class="form-group-prepend__field form-control hide-placeholder" placeholder="Имя" required>
+                <div class="invalid-feedback">Введите ваше имя</div>
+            </div>
+
+            <div class="form-group-prepend">
+                <label class="sr-only" for="call-form__email">E-mail*</label>
+                <svg class="form-group-prepend__icon">
+                    <use xlink:href="img/icons.svg#email"></use>
+                </svg>
+                <input type="email" id="call-form__email" class="form-group-prepend__field form-control hide-placeholder" placeholder="E-mail" required>
+                <div class="invalid-feedback">Введите Ваш e-mail</div>
+            </div>
+
+            <div class="form-group-prepend">
+                <label class="sr-only" for="call-form__tel">Контактный телефон*</label>
+                <svg class="form-group-prepend__icon">
+                    <use xlink:href="img/icons.svg#phone"></use>
+                </svg>
+                <input type="tel" id="call-form__tel" class="form-group-prepend__field form-control hide-placeholder" placeholder="+7 (___) ___-__-__" required>
+                <div class="invalid-feedback">Заполните номер телефона</div>
+            </div>
+
+            <button type="button" class="call-form__btn btn-primary btn">Отправить</button>
+        </form>
+        <div class="required-fields"><span class="text-red">*</span> - обязательные поля</div>
+    </div>
+</section>
+
+<section class="official-partners">
+    <div class="container">
+        <h2 class="section-title">Наши официальные партнёры </h2>
+        <div class="official-partners__pre-title">
+            Среди партнеров Alianta Group&nbsp;&mdash; ведущие федеральные и&nbsp;локальные розничные сети,
+            лучшие рестораны России, винные бутики, а&nbsp;также частные и&nbsp;корпоративные клиенты.
+        </div>
+        <div class="official-partners__list">
+            <div class="official-partners__list-item">
+                <div class="official-partners__title">Сетевая розница</div>
+                <img src="img/media/official-partners-01.jpg" alt="Сетевая розница">
+            </div>
+            <div class="official-partners__list-item">
+                <div class="official-partners__title">Магазины и&nbsp;бутики</div>
+                <img src="img/media/official-partners-02.jpg" alt="Магазины и бутики">
+            </div>
+            <div class="official-partners__list-item">
+                <div class="official-partners__title">HoReCa</div>
+                <img src="img/media/official-partners-03.jpg" alt="HoReCa">
+            </div>
+        </div>
+    </div>
+</section>
+
+@@include("blocks/footer.html")
