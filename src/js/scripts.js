@@ -20,7 +20,7 @@ window.addEventListener('load', function () {
     baguetteBox.run('.gallery-wrap');
 });
 
-if (document.documentElement.clientWidth < 576) {
+if (document.documentElement.clientWidth < 768) {
     new Glider(document.querySelector('.gallery-prev'), {
         slidesToShow: 1,
         slidesToScroll: 1,
