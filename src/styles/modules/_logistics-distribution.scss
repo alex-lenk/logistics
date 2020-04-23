@@ -21,7 +21,7 @@
 
 .logistics-distribution__title {
   line-height: 1;
-  color: $red;
+  color: $aqua;
 }
 
 .logistics-distribution__list {
@@ -67,7 +67,7 @@
 
 @media (max-width: 575px) {
   .logistics-distribution {
-    margin-bottom: 70px;
+    margin-bottom: 20px;
     background-color: #fff;
     box-shadow: none;
   }

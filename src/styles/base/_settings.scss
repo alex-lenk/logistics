@@ -13,6 +13,8 @@ $black3: #494949;
 $pink: #f9a1aa;
 $red: #9b0030;
 $red2: #cf0040;
+$aqua: #006774;
+$aqua2: #009CB4;
 $orange: #ff6921;
 $orange2: #d74600;
 $yellow: #f4ec19;
@@ -21,7 +23,7 @@ $secondary: $black3;
 
 // Typography
 $font-family-sans-serif: 'SFUIDisplay', Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$link-hover-color: $red;
+$link-hover-color: $aqua;
 
 // Quickly modify global styling by enabling or disabling optional features.
 $enable-grid-classes: false;

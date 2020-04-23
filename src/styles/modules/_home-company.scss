@@ -7,12 +7,6 @@
   line-height: 1.4;
 }
 
-.home-company__pre-title {
-  margin-bottom: 7px;
-  font-size: 24px;
-  font-weight: 500;
-}
-
 @media (min-width: 576px) {
   .home-company {
     margin-bottom: 100px;
@@ -21,11 +15,19 @@
     padding-left: 0;
     padding-right: 0;
   }
+  .home-company__content .btn {
+    margin-top: 9px;
+  }
+  .home-company__pre-title {
+    margin-bottom: 7px;
+    font-size: 24px;
+    font-weight: 500;
+  }
 }
 
 @media (max-width: 575px) {
   .home-company {
-    margin-bottom: 70px;
+    margin-bottom: 25px;
     padding-top: 70px;
     background-color: #fff;
     box-shadow: none;

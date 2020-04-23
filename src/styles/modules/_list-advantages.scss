@@ -1,45 +1,3 @@
-@mixin stitches-sprite($x: 0, $y: 0) {
-  background-position: $x $y;
-}
-
-[class*="sprite-"]::before {
-  width: 60px;
-  height: 60px;
-  background-image: url(../img/sprites-advantages.png);
-  background-repeat: no-repeat;
-  background-size: 180px 176px;
-  display: block;
-  content: '';
-}
-
-.sprite-icon-01::before {
-  @include stitches-sprite(0, 0);
-}
-
-.sprite-icon-02::before {
-  @include stitches-sprite(-60px, 0);
-}
-
-.sprite-icon-03::before {
-  @include stitches-sprite(0, -60px);
-}
-
-.sprite-icon-04::before {
-  @include stitches-sprite(-60px, -60px);
-}
-
-.sprite-icon-05::before {
-  @include stitches-sprite(-120px, 0);
-}
-
-.sprite-icon-06::before {
-  @include stitches-sprite(-120px, -60px);
-}
-
-.sprite-icon-07::before {
-  @include stitches-sprite(17px, -121px);
-}
-
 .list-advantages {
   padding-top: 15px;
   padding-left: 0;
@@ -52,8 +10,50 @@
   line-height: 1.3;
 
   &::before {
+    width: 54px;
+    height: 52px;
     margin: 0 auto 11px;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
   }
+}
+
+.sprite-icon-01::before {
+  width: 54px;
+  background-image: url(../img/company-ico/layer-01.svg);
+}
+
+.sprite-icon-02::before {
+  width: 71px;
+  background-image: url(../img/company-ico/layer-02.svg);
+}
+
+.sprite-icon-03::before {
+  width: 43px;
+  background-image: url(../img/company-ico/layer-03.svg);
+}
+
+.sprite-icon-04::before {
+  width: 43px;
+  background-image: url(../img/company-ico/layer-04.svg);
+}
+
+.sprite-icon-05::before {
+  width: 80px;
+  background-image: url(../img/company-ico/layer-05.svg);
+}
+
+.sprite-icon-06::before {
+  width: 52px;
+  background-image: url(../img/company-ico/layer-06.svg);
+}
+
+.sprite-icon-07::before {
+  width: 40px;
+  background-image: url(../img/company-ico/layer-07.svg);
 }
 
 @media (min-width: 992px) {

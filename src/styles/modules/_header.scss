@@ -33,7 +33,7 @@
     width: 0;
     height: 1px;
     opacity: 0;
-    background-color: $red;
+    background-color: $aqua;
     position: absolute;
     transition: opacity .4s ease, width .4s ease;
     content: '';
@@ -130,6 +130,13 @@
 }
 
 @media (max-width: 991px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
   .header-logo {
     margin-left: auto;
     margin-right: auto;
@@ -152,7 +159,7 @@
     z-index: 20;
     position: fixed;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(69,74,113,.4);
+    box-shadow: 0 0 10px rgba(69, 74, 113, .4);
     transition: transform .3s ease-out;
     transform: translateX(-100%);
   }
@@ -168,6 +175,7 @@
     padding-bottom: 14px;
     display: block;
     position: relative;
+
     &::before {
       width: 12px;
       height: 12px;

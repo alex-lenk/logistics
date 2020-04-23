@@ -54,7 +54,7 @@ a:focus {
     text-decoration: underline;
 
     &:hover {
-      color: $red;
+      color: $aqua;
     }
   }
 }
@@ -83,6 +83,10 @@ a:focus {
 
 .text-red {
   color: $red;
+}
+
+.text-aqua {
+  color: $aqua;
 }
 
 .d-none {
@@ -114,7 +118,7 @@ a:focus {
   &::after {
     width: 0;
     height: 1px;
-    background-color: $red;
+    background-color: $aqua;
     position: absolute;
     left: 0;
     bottom: -3px;
@@ -194,6 +198,12 @@ a:focus {
     margin-bottom: 10px;
     font-size: 24px;
     line-height: 32px;
+  }
+}
+
+@media (max-width: 991px) {
+  body {
+    padding-top: 60px;
   }
 }
 

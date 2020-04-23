@@ -14,6 +14,7 @@ var gulp = require('gulp'),
     svgstore = require('gulp-svgstore'),
     imagemin = require('gulp-imagemin');
 
+
 const paths = {
     html: {
         src: './src/html/*.html',
@@ -50,6 +51,24 @@ const paths = {
 gulp.task('svgIcons', function () {
     return gulp
         .src('./src/img/icons/*.svg')
+        .pipe(svgmin(function (file) {
+            var prefix = basePath.basename(file.relative, basePath.extname(file.relative));
+            return {
+                plugins: [{
+                    cleanupIDs: {
+                        prefix: prefix + '-',
+                        minify: true
+                    }
+                }]
+            }
+        }))
+        .pipe(svgstore())
+        .pipe(gulp.dest('./build/img/'));
+});
+
+gulp.task('companyIcons', function () {
+    return gulp
+        .src('./src/img/company-ico/*.svg')
         .pipe(svgmin(function (file) {
             var prefix = basePath.basename(file.relative, basePath.extname(file.relative));
             return {

@@ -85,7 +85,7 @@
 }
 
 .distribution-content__list {
-  line-height: 22px;
+  font-weight: 500;
 }
 
 @media (min-width: 576px) {
@@ -147,6 +147,9 @@
   }
   .calculator-total__line {
     margin-bottom: 17px;
+  }
+  .distribution-content__list {
+    line-height: 22px;
   }
 }
 
@@ -223,9 +226,6 @@
     font-size: 32px;
     line-height: 45px;
   }
-  .distribution-content__list {
-    font-weight: 600;
-  }
   .distribution-content__item:not(:last-child) {
     margin-bottom: 14px;
   }
@@ -263,16 +263,13 @@
     position: relative;
 
     &::before {
-      width: 225px;
-      height: 1025px;
+      width: 29px;
+      height: 420px;
       position: absolute;
       top: 0;
       left: 0;
       background-image: url(../img/distribution/graphic-m.svg)
     }
-  }
-  .distribution-graphic__list {
-    padding-top: 157px;
   }
   .distribution-graphic__item {
     width: 78%;
@@ -281,16 +278,13 @@
     line-height: 24px;
     color: $black;
 
-    &:nth-child(1) {
-      margin-bottom: 228px;
-    }
-
     &:nth-child(2) {
-      margin-bottom: 277px;
+      margin-top: 82px;
+      margin-bottom: 90px;
     }
 
     &:nth-child(3) {
-      margin-bottom: 242px;
+      margin-bottom: 85px;
     }
   }
 
@@ -304,11 +298,8 @@
   .distribution-content__left {
     order: 1;
   }
-  .distribution-content__list {
-    font-weight: 500;
-  }
   .distribution-content__item:not(:last-child) {
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
   .distribution-content__title {
     margin-top: 20px;
@@ -405,6 +396,11 @@
   }
   .calculator-total__result {
     align-self: center
+  }
+
+  .distribution-content__list {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 

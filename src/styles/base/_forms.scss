@@ -50,6 +50,11 @@
   border: 1px solid red !important;
 }
 
+.form-control {
+  padding-top: 3px;
+  padding-bottom: 1px;
+}
+
 @media (min-width: 992px) {
   .form-group-prepend {
     max-width: 26%;

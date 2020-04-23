@@ -11,10 +11,6 @@
 
   .table-cell {
     background-color: #B8B8B8;
-    vertical-align: bottom;
-    text-align: inherit;
-    font-size: 18px;
-    line-height: 18px;
   }
 }
 
@@ -28,7 +24,7 @@
 
 .table-cell {
   display: table-cell;
-  padding: .75rem;
+  padding: 12px 10px;
   vertical-align: top;
   border: 1px solid #828282;
   color: $black;
@@ -37,9 +33,27 @@
 
 .table-row-group {
   display: table-row-group;
+}
 
-  .table-cell {
+@media (min-width: 768px) {
+  .table-header-group .table-cell {
+    font-size: 18px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .table-row-group .table-cell {
     font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .table-header-group .table-cell:nth-of-type(2) {
+    white-space: nowrap;
+  }
+  .table-cell {
+    font-size: 13px;
     line-height: 18px;
+    padding: 8px 5px 8px 7px;
   }
 }

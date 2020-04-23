@@ -1,11 +1,4 @@
 .logistics-header {
-  margin-bottom: 50px;
-  padding-top: 50px;
-
-  .page-pre-title {
-    margin-bottom: 54px;
-  }
-
   &::after {
     background: url(../img/logistics/logistics-01.svg) no-repeat center;
     background-size: contain;
@@ -18,19 +11,14 @@
 }
 
 .logistics-services::before {
-  width: 354px;
+  display: block;
   background: url(../img/logistics/logistics-05.svg) no-repeat center;
   background-size: contain;
   content: '';
 }
 
-.logistics-stage {
-  margin-bottom: 100px;
-
-  .page-title {
-    margin-bottom: 30px;
-    text-align: center;
-  }
+.logistics-stage .page-title {
+  margin-bottom: 30px;
 }
 
 .logistics-stage__list {
@@ -38,11 +26,13 @@
   flex-wrap: wrap;
 }
 
-.logistics-stage__list-item {
-  .btn {
-    height: auto;
-    padding: 5px 9px 4px;
-  }
+.logistics-stage__list-decor {
+  height: auto;
+  padding: 5px 10px 4px;
+  background: #006774;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
 }
 
 .logistics-stage__list-title {
@@ -50,38 +40,63 @@
   color: $black
 }
 
-.computation {
-  margin-bottom: 99px;
-  display: flex;
-  flex-wrap: wrap;
-
-  &::after {
-    width: 388px;
-    height: 373px;
-    margin-left: 4%;
-    display: block;
-    background: url(../img/logistics/logistics-02.svg) no-repeat center;
-    background-size: contain;
-    content: '';
-  }
+.computation::before {
+  display: block;
+  background: url(../img/logistics/logistics-02.svg) no-repeat center;
+  background-size: contain;
+  content: '';
 }
 
 .computation-text {
   font-weight: 500;
-  font-size: 24px;
-  line-height: 32px;
-  order: 1;
-}
-
-.logistics-cost {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background-color: #FBFBFB;
-  box-shadow: 0 0 10px rgba(69, 74, 113, 0.4);
 }
 
 .logistics-cost__inner {
   display: flex;
+}
+
+@media (min-width: 576px) {
+  .logistics-header {
+    padding-top: 50px;
+    margin-bottom: 50px;
+
+    .page-pre-title {
+      margin-bottom: 54px;
+    }
+  }
+  .logistics-services::before {
+    width: 354px;
+  }
+  .logistics-stage {
+    margin-bottom: 95px;
+
+    .page-title {
+      text-align: center;
+    }
+  }
+  .computation {
+    margin-bottom: 99px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &::before {
+      width: 388px;
+      height: 373px;
+      margin-left: 5%;
+      order: 1;
+    }
+  }
+  .computation-text {
+    font-size: 24px;
+    line-height: 32px;
+    order: 2;
+  }
+  .logistics-cost {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #FBFBFB;
+    box-shadow: 0 0 10px rgba(69, 74, 113, 0.4);
+  }
 }
 
 @media (min-width: 992px) {
@@ -103,10 +118,11 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: flex-start;
 
     &::before {
       height: inherit;
-      margin: 0 0 0 6%;
+      margin: 0 8% 0 5%;
     }
   }
 
@@ -203,9 +219,7 @@
     margin-bottom: 70px;
 
     &::before {
-      height: 318px;
       margin-bottom: 20px;
-      display: block;
     }
   }
   .logistics-stage__list {
@@ -225,7 +239,7 @@
     }
   }
   .logistics-stage__list-item {
-    margin-left: 5%;
+    margin-left: 9%;
 
     &:first-child {
       margin-bottom: 60px;
@@ -258,9 +272,61 @@
   }
 }
 
+@media (max-width: 575px) {
+  .logistics-header {
+    margin-bottom: 20px;
+    padding-top: 28px;
+
+    .page-pre-title {
+      margin-bottom: 30px;
+    }
+  }
+  .logistics-stage {
+    margin-bottom: 54px;
+
+    .page-title {
+      font-size: 18px
+    }
+  }
+
+  .logistics-services {
+    padding-top: 20px;
+    border-top: 1px solid #C4C4C4;
+
+    &::before {
+      width: 105px;
+      height: 94px;
+    }
+  }
+  .computation {
+    margin-bottom: 70px;
+
+    &::before {
+      width: 164px;
+      height: 158px;
+      margin-bottom: 20px;
+    }
+  }
+  .computation-box .h1,
+  .logistics-cost__content .h1 {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  .computation-text {
+    margin-top: 20px;
+    padding-top: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    border-top: 1px solid #C4C4C4;
+  }
+}
+
 @media (min-width: 576px) and (max-width: 991px) {
   .logistics-header::after {
     background-position-x: left;
+  }
+  .logistics-services::before {
+    height: 318px;
   }
 }
 
