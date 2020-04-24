@@ -1,27 +1,25 @@
-//= vendor/jquery-3.5.0.slim.min.js
-//= vendor/jquery.maskedinput.min.js
 //= vendor/baguetteBox.min.js
 //= vendor/glider.min.js
 //= vendor/tab.js
+//= snippet/mask.js
 
-$(document).ready(function () {
-    $('#call-form__tel').mask("+7 (999) 999-99-99");
+function clickHeaderToggle() {
+    document.querySelector('body').classList.toggle('menu-opened');
+}
 
-    $('.menu-toggle').click(function () {
-        $('body').toggleClass('menu-opened');
-    });
-
-    if ($(window).width() < 575) {
-        $('.home-company__media .media-wrap').appendTo('.home-company__pre-title');
-    }
+window.addEventListener("DOMContentLoaded", function () {
+    document.querySelector('.menu-toggle').addEventListener("click", clickHeaderToggle);
 });
+
 
 window.addEventListener('load', function () {
     baguetteBox.run('.gallery-wrap');
 });
 
-if (document.documentElement.clientWidth < 768) {
-    new Glider(document.querySelector('.gallery-prev'), {
+var galleryPrev = document.querySelector('.gallery-prev');
+
+if (document.documentElement.clientWidth < 768 && galleryPrev) {
+    new Glider(galleryPrev, {
         slidesToShow: 1,
         slidesToScroll: 1,
         scrollLock: true,
@@ -31,4 +29,8 @@ if (document.documentElement.clientWidth < 768) {
             next: '.gallery-prev__next'
         }
     });
+}
+
+if (document.documentElement.clientWidth < 576) {
+    document.querySelector('.home-company__pre-title').append(document.querySelector('.home-company__media .media-wrap'));
 }

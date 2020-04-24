@@ -95,6 +95,8 @@
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #FBFBFB;
+    z-index: 1;
+    position: relative;
     box-shadow: 0 0 10px rgba(69, 74, 113, 0.4);
   }
   .call-back__text {
