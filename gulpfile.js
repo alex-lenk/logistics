@@ -169,7 +169,7 @@ gulp.task('watch', function () {
     gulp.watch(paths.styles.watch, gulp.parallel('styles'));
     gulp.watch(paths.js.watch, gulp.parallel('scripts'));
     gulp.watch(paths.html.watch, gulp.parallel('code'));
-    gulp.watch(paths.img.watch, gulp.parallel('img'));
+    //gulp.watch(paths.img.watch, gulp.parallel('img'));
     gulp.watch(paths.favicon.watch, gulp.parallel('favicon'));
     gulp.watch(paths.fonts.watch, gulp.parallel('fonts'));
 });

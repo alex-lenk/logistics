@@ -3,8 +3,7 @@
 <div class="main-info">
     <div class="main-info__inner container">
         <h1 class="main-info__title">
-            Сервис по<br class="hidden-xs">
-            логистике<br class="hidden-xs">
+            Сервис по логистике<br class="hidden-xs">
             и&nbsp;дистрибуции<br>
             винной продукции
         </h1>
@@ -94,7 +93,26 @@
             </div>
 
             <button type="button" class="call-form__btn btn-primary btn">Отправить</button>
+
+            <!-- Error -->
+            <div class="call-form__error d-none">
+                Имя, телефон или e-mail заполненный не верно, проверте форму и повторите вновь.
+            </div>
+            <!-- END Error -->
         </form>
+
+        <!-- success -->
+        <div class="form-done d-none">
+            <div class="form-done__title">Спасибо Имя_из_форма!</div>
+            <div class="form-done__text">
+                Ваша заявка оформлена на +7 977 546 34 86<br>
+                Мы свяжемся с вами в рабочее время<br>
+                пн-пт: 09:00 - 19:00
+            </div>
+            <div class="form-done__close btn-secondary btn">Закрыть</div>
+        </div>
+        <!-- END success -->
+
         <div class="required-fields"><span class="text-red">*</span> - обязательные поля</div>
     </div>
 </section>

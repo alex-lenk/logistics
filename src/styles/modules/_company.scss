@@ -8,19 +8,18 @@
   content: '';
 }
 
-.gallery-wrap {
-  img {
-    transition: opacity .4s;
+.gallery-wrap .distribution-content__list {
+  margin-bottom: 7px
+}
 
-    &:hover {
-      opacity: .8;
-    }
-  }
+.gallery-prev__item img {
+  transition: opacity .4s;
 
-  .distribution-content__list {
-    margin-bottom: 7px
+  &:hover {
+    opacity: .8;
   }
 }
+
 
 .gallery-prev {
   padding-top: 30px;
