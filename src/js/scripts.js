@@ -1,6 +1,6 @@
 //= vendor/baguetteBox.min.js
 //= vendor/glider.min.js
-//= vendor/tab.js
+//= snippet/tab.js
 //= snippet/mask.js
 
 function clickHeaderToggle() {
@@ -31,6 +31,6 @@ if (document.documentElement.clientWidth < 768 && galleryPrev) {
     });
 }
 
-if (document.documentElement.clientWidth < 576) {
+if (document.documentElement.clientWidth < 576 && document.querySelector('.home-company__media .media-wrap')) {
     document.querySelector('.home-company__pre-title').append(document.querySelector('.home-company__media .media-wrap'));
 }
