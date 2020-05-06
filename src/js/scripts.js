@@ -3,6 +3,7 @@
 //= snippet/tab.js
 //= snippet/mask.js
 
+/* BEGIN: Menu toggle */
 function clickHeaderToggle() {
     document.querySelector('body').classList.toggle('menu-opened');
 }
@@ -10,6 +11,7 @@ function clickHeaderToggle() {
 window.addEventListener("DOMContentLoaded", function () {
     document.querySelector('.menu-toggle').addEventListener("click", clickHeaderToggle);
 });
+/* END: Menu toggle */
 
 
 window.addEventListener('load', function () {
