@@ -54,7 +54,7 @@ a:focus {
     text-decoration: underline;
 
     &:hover {
-      color: $aqua;
+      color: $red;
     }
   }
 }
@@ -83,10 +83,6 @@ a:focus {
 
 .text-red {
   color: $red;
-}
-
-.text-aqua {
-  color: $aqua;
 }
 
 .d-none {
@@ -118,7 +114,7 @@ a:focus {
   &::after {
     width: 0;
     height: 1px;
-    background-color: $aqua;
+    background-color: $red;
     position: absolute;
     left: 0;
     bottom: -3px;

@@ -174,4 +174,4 @@ gulp.task('watch', function () {
     gulp.watch(paths.fonts.watch, gulp.parallel('fonts'));
 });
 
-gulp.task('default', gulp.parallel('img', 'favicon', 'fonts', 'styles', 'scripts', 'code', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('favicon', 'fonts', 'styles', 'scripts', 'code', 'browser-sync', 'watch'));

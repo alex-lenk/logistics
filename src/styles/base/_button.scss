@@ -38,12 +38,12 @@
 
   &::before {
     background-color: #fff;
-    border: 1px solid $aqua;
+    border: 1px solid $red;
     border-radius: inherit;
   }
 
   &::after {
-    background: linear-gradient(180deg, $aqua2 0%, $aqua 100%);
+    background: linear-gradient(180deg, $red2 0%, $red 100%);
   }
 }
 
@@ -77,9 +77,9 @@
   }
 
   &:not(:disabled):not(.disabled):active {
-    color: $aqua;
+    color: $red;
     background-color: #fff;
-    border-color: $aqua;
+    border-color: $red;
   }
 }
 
@@ -103,7 +103,7 @@
     opacity: 0;
   }
   .btn-primary:hover {
-    color: $aqua;
+    color: $red;
   }
   .btn-grey:hover {
     color: #fff;
